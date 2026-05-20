@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+        stage('Check Docker Permission') {
+            steps {
+                sh 'sudo chmod 666 /var/run/docker.sock || true'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
