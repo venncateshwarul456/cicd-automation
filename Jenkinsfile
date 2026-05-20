@@ -11,7 +11,7 @@ pipeline {
     stages {
         stages('Clone Repo'){
             steps{
-               git branch: 'main', url: https://github.com/venncateshwarul456/cicd-automation.git' //change 
+               git branch: 'main', url: 'https://github.com/venncateshwarul456/cicd-automation.git' //change 
             }
         }
         
